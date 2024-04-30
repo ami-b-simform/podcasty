@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:podcasty/extensions/media_query_extension.dart';
 import 'package:podcasty/values/app_theme.dart';
 import 'package:podcasty/values/string_constants.dart';
 
 class HeaderWidget extends StatelessWidget {
   final bool isLeftOriented;
 
+  ///Header component for Authentication module
   const HeaderWidget({
-    Key? key,
+    super.key,
     this.isLeftOriented = true,
-  }) : super(key: key);
+  });
 
-  //Header component for Authentication module
   @override
   Widget build(BuildContext context) {
+    Size screenSize = context.screenSize;
+
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: MediaQuery.of(context).size.height * 0.01,
-        horizontal: MediaQuery.of(context).size.width * 0.05,
+        vertical: screenSize.height * 0.01,
+        horizontal: screenSize.width * 0.05,
       ),
       child: Align(
         alignment:
@@ -25,6 +28,8 @@ class HeaderWidget extends StatelessWidget {
           AppStrings.welcome,
           textAlign: TextAlign.center,
           style: AppTheme.displayHeading,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
       ),
     );
