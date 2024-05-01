@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:podcasty/extensions/media_query_extension.dart';
-import 'package:podcasty/values/app_theme.dart';
 import 'package:podcasty/values/string_constants.dart';
 
 class HeaderWidget extends StatelessWidget {
@@ -14,20 +13,21 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = context.screenSize;
+    final screenSize = context.screenSize;
+    final themeData = Theme.of(context);
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: screenSize.height * 0.01,
+        vertical: screenSize.height * 0.03,
         horizontal: screenSize.width * 0.05,
       ),
       child: Align(
         alignment:
             isLeftOriented ? Alignment.centerLeft : Alignment.centerRight,
-        child: const Text(
+        child: Text(
           AppStrings.welcome,
           textAlign: TextAlign.center,
-          style: AppTheme.displayHeading,
+          style: themeData.textTheme.displayLarge,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),

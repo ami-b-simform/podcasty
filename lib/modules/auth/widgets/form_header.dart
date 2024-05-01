@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:podcasty/values/app_theme.dart';
 import 'package:podcasty/values/assets_path.dart';
 
 class FormHeader extends StatelessWidget {
@@ -15,13 +14,14 @@ class FormHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeData = Theme.of(context);
     return Align(
       alignment: isLeftOriented ? Alignment.centerLeft : Alignment.centerRight,
       child: Column(
         children: [
           Text(
             headerText,
-            style: AppTheme.displaySubHeading,
+            style: themeData.textTheme.headlineMedium,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),

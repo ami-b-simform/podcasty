@@ -2,7 +2,7 @@ class CommonValidators {
   const CommonValidators._();
 
   //Regex for name
-  static final RegExp nameValidators = RegExp(r'^[a-zA-Z ]+$');
+  static final RegExp userNameValidators = RegExp(r'^[a-zA-Z ]+$');
 
   //Regex for email
   static final RegExp emailValidators = RegExp(
