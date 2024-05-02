@@ -13,7 +13,8 @@ class Podcasty extends StatelessWidget {
         appBar: AppBar(
           title: Text('Podcasty'),
         ),
-        body: Container(), // This container represents the blank screen
+        body: Container(),
+        // This container represents the blank screen
       ),
     );
   }
