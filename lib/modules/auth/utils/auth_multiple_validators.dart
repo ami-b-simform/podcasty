@@ -5,6 +5,6 @@ class AuthMultipleValidators {
   static bool validateWithMultipleRegex(String value) {
     return CommonValidators.emailValidators.hasMatch(value) ||
         CommonValidators.numberValidators.hasMatch(value) ||
-        CommonValidators.nameValidators.hasMatch(value);
+        CommonValidators.userNameValidators.hasMatch(value);
   }
 }

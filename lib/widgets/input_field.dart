@@ -14,7 +14,7 @@ class InputField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final ValueSetter<String>? onSubmitted;
   final VoidCallback? suffixIconPress;
-  final InputValidationType validationType;
+  final ValidationType validationType;
 
   const InputField({
     super.key,
@@ -27,7 +27,7 @@ class InputField extends StatelessWidget {
     this.textInputAction = TextInputAction.next,
     this.onSubmitted,
     this.suffixIconPress,
-    this.validationType = InputValidationType.name,
+    this.validationType = ValidationType.username,
   });
 
   @override

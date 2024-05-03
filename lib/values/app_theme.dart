@@ -9,37 +9,9 @@ class AppTheme {
   static const String ubuntuFont = 'Ubuntu';
   static const String nautigalFont = 'TheNautigal';
 
-  //To display medium fonts
-  static const TextStyle displayMedium = TextStyle(
-    color: AppColors.lightYellow,
-    fontSize: 16,
-    fontFamily: ubuntuFont,
-  );
-
-  //To display heading
-  static const TextStyle displayHeading = TextStyle(
-    fontSize: 80,
-    color: AppColors.welcomeColor,
-    fontWeight: FontWeight.bold,
-    fontFamily: AppTheme.nautigalFont,
-  );
-
-  //To display sub heading
-  static const TextStyle displaySubHeading = TextStyle(
-    fontSize: 30,
-    color: AppColors.lightYellow,
-    fontFamily: AppTheme.ubuntuFont,
-    fontWeight: FontWeight.bold,
-  );
-
   static final ThemeData appThemeLight = ThemeData(
     primaryColor: AppColors.blueGrey,
     scaffoldBackgroundColor: AppColors.white,
-    textTheme: const TextTheme(
-      titleLarge: TextStyle(
-        color: AppColors.black,
-      ), // AppBar text color
-    ),
     inputDecorationTheme: const InputDecorationTheme(
       labelStyle: TextStyle(
         color: AppColors.inputLabelColor,
@@ -57,6 +29,34 @@ class AppTheme {
     ),
     colorScheme: ColorScheme.fromSwatch().copyWith(
       secondary: AppColors.yellow,
+    ),
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+        fontSize: 80,
+        color: AppColors.welcomeColor,
+        fontWeight: FontWeight.bold,
+        fontFamily: AppTheme.nautigalFont,
+      ),
+      displayMedium: TextStyle(
+        color: AppColors.lightYellow,
+        fontSize: 14,
+        fontFamily: ubuntuFont,
+      ),
+      headlineSmall: TextStyle(
+        color: AppColors.yellow,
+        fontSize: 14,
+        fontFamily: ubuntuFont,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 30,
+        color: AppColors.lightYellow,
+        fontFamily: AppTheme.ubuntuFont,
+        fontWeight: FontWeight.bold,
+      ),
+      headlineLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 20.0,
+      ),
     ),
   );
 }

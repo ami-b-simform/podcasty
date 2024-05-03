@@ -15,4 +15,6 @@ class AppColors {
   static const Color blueGrey = Color(0xFF00121b);
 
   static const Color welcomeColor = Color(0xFF0e4256);
+
+  static const Color transparentColor = Colors.transparent;
 }

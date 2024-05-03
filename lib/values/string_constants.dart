@@ -18,6 +18,7 @@ class AppStrings {
   static const String dontHaveAccount = "Don't have an account?";
   static const String register = 'Register now';
   static const String forgotPasswordValue = 'Toh rehndo phir 😜';
+  static const String signedIn = 'Hey There!';
 
   //Validation errors
   static const String emptyError = 'Please enter some text';
